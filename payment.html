@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .OR{
+        padding: 80px 120px;
+    }
+    .link{
+        border: 10px;
+        padding: 30px 150px;
+        cursor:pointer;
+    }
+    .cont{
+        padding: 110px 20px;
+    }
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+   <th><h1>PAYMENT THROUGH CARD</h1>
+    <div class="container">
+        <h1>CARD DETAILS</h1>
+        <div class="first-row">
+            <div class="owner">
+                <h3>Owner</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password">
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>Expiry</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                      <select name="years" id="years">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                      </select>
+                </div>
+                <div class="cards">
+                    <img src="mc.png" alt="">
+                    <img src="vi.png" alt="">
+                    <img src="pp.png" alt="">
+                </div>
+            </div>    
+        </div>
+        <a href="main.html">Confirm</a>
+    </div>
+    </th>
+    <th>
+        <h3 class="OR">OR</h3>
+    </th>
+
+    <th><h1>PAYMENT THROUGH UPI</h1>
+    <ul>
+        <div class="cont">
+        <h1 class="link"><a href="https://www.phonepe.com">PHONEPE</a></h1>
+        <h1 class="link" ><a href="https://paytm.com">PAYTM</a></h1>
+        <h1 class="link"><a href="https://pay.google.com">GOOGLE PAY</a></h1>
+        </div>
+    </ul>
+    </th>
+</tr>
+</table>
+</body>
+</html>

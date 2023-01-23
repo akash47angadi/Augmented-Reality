@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color:#17141d;
+                overflow-x: hidden;
+                transition: 0.5s;
+                
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color:white;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #C8C8C8;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            #main {
+                transition: margin-left .3s;
+                padding: 16px;
+                width:97%;
+                position:fixed;
+                background-color:#17141d;
+                box-shadow: -1rem 0 3rem #000 ;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+            .login{
+            float: right;
+            width: 100px;
+            height: 50px;
+            background-color: #17141d;
+            border: 3px solid #2e3033;
+            color: whitesmoke;
+            border-radius: 10px ;
+            box-shadow: -1rem 0 3rem #000;
+            }           
+            .login:hover {
+            opacity: 0.5;
+            height: 55px;
+            width: 120px;
+            border: 3px solid white;
+            transition: 0.4s ease-out;
+            }           
+            .navmen{
+            font-size:30px;
+            cursor:pointer; 
+            font-family:lobster;
+            color: whitesmoke;
+            }           
+            .navmen:hover{
+            border: 3px solid white;
+            border-radius: 10px ;
+            transition: 0.4s ease-out;
+            }           
+
+        </style>
+            <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+            </script>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+          
+        <div id="main" >
+            <span class = "navmen" onclick="openNav() " >  &#9776  </span>
+            <img align ="center" id="status-logo" src="logoname.png" style="height:30px; width:150px;" >
+        </div>
+    </body>
+</html>

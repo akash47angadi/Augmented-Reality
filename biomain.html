@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web AR</title>
+    <meta name=" viewport" content="width=device-width,initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <style>
+        @keyframes pump {
+            0% {
+                transform: scale(0.95);
+            }
+
+            5% {
+                transform: scale(1.1);
+            }
+
+            39% {
+                transform: scale(0.85);
+            }
+
+            45% {
+                transform: scale(1);
+            }
+
+            60% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(0.9);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #17141d;
+        }
+
+        .demo {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .demo model-viewer {
+            width: 99vh;
+            height: 99vh;
+        }
+
+        .demo1 model-viewer {
+            width: 99vh;
+            height: 99vh;
+            animation: pump 1s linear infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        function heart() {
+            window.location.href = "bio.html";
+        }
+
+        function anatomy() {
+            window.location.href = "bioanotomy.html";
+        }
+    </script>
+    <table>
+        <tr>
+            <td>
+                <span class="demo1" onclick="heart()">
+                    <span>
+                        <model-viewer id="model1" src="cardiac_anatomy_external_view.glb" auto-rotate camera-controls
+                            animation-name="Running" autoplay ar>
+                        </model-viewer>
+                    </span>
+
+
+                </span>
+            </td>
+            <td>
+                <span class="demo" onclick="anatomy()">
+                    <span>
+                        <model-viewer id="model" src="ecorche_-_anatomy_study.glb" auto-rotate camera-controls
+                            animation-name="Running" autoplay ar>
+                    </span>
+
+                </span>
+            </td>
+
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
